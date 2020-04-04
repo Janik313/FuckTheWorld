@@ -2155,6 +2155,7 @@ MonoBehaviour:
   ThreeHit: {fileID: 784023092}
   FourHit: {fileID: 893478117}
   Bombs2: {fileID: 605919910}
+  WinText: {fileID: 2130501795}
 --- !u!4 &592748997
 Transform:
   m_ObjectHideFlags: 0
@@ -2280,8 +2281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401.06, y: -0.48851}
-  m_SizeDelta: {x: 1291.6, y: 981.62}
+  m_AnchoredPosition: {x: -356, y: 16.8}
+  m_SizeDelta: {x: 1390.5, y: 1089.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613335109
 MonoBehaviour:
@@ -3466,8 +3467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.001709, y: -0.00103}
-  m_SizeDelta: {x: 244.74, y: 490.32}
+  m_AnchoredPosition: {x: -0.001606, y: 22.545}
+  m_SizeDelta: {x: 426.1, y: 632.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009227159
 MonoBehaviour:
@@ -3555,7 +3556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4021,7 +4022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4787,15 +4788,15 @@ RectTransform:
   m_GameObject: {fileID: 1287559548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 1048866954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.6, y: -0.000005722}
-  m_SizeDelta: {x: 518.2, y: 510.1}
+  m_AnchoredPosition: {x: 79, y: 3.07}
+  m_SizeDelta: {x: 512, y: 178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287559550
 MonoBehaviour:
@@ -4815,7 +4816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1e2dc1c752c8394ea9dea7af6111b1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5146420b72f67ff458a4cb8eeda9e5dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4883,7 +4884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6187,7 +6188,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 592748996}
-        m_MethodName: bomb
+        m_MethodName: BombEarth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6320,6 +6321,7 @@ MonoBehaviour:
   ThreeHit: {fileID: 0}
   FourHit: {fileID: 0}
   Bombs2: {fileID: 0}
+  WinText: {fileID: 0}
 --- !u!114 &1680444331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7289,6 +7291,7 @@ MonoBehaviour:
   ThreeHit: {fileID: 0}
   FourHit: {fileID: 0}
   Bombs2: {fileID: 0}
+  WinText: {fileID: 0}
 --- !u!1 &1776675521
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,7 +7342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7560,6 +7563,7 @@ RectTransform:
   - {fileID: 605919912}
   - {fileID: 1379183118}
   - {fileID: 1679584021}
+  - {fileID: 2130501794}
   m_Father: {fileID: 968302389}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7792,6 +7796,7 @@ MonoBehaviour:
   ThreeHit: {fileID: 0}
   FourHit: {fileID: 0}
   Bombs2: {fileID: 0}
+  WinText: {fileID: 0}
 --- !u!114 &1906210060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7920,15 +7925,15 @@ RectTransform:
   m_GameObject: {fileID: 1928785015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1628107223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 998, y: 286}
-  m_SizeDelta: {x: 825, y: 341}
+  m_AnchoredPosition: {x: -620, y: 274.07}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928785017
 MonoBehaviour:
@@ -7948,7 +7953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1e2dc1c752c8394ea9dea7af6111b1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20acbc3fc8107dc498de0df7d4707c2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8150,7 +8155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: click here  to convert 10'000 uranium into 1 nuclear bomb
+  m_Text: click here  to convert 300 plutonium into 1 nuclear bomb
 --- !u!222 &2036333073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8565,4 +8570,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126517636}
+  m_CullTransparentMesh: 0
+--- !u!1 &2130501793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130501794}
+  - component: {fileID: 2130501796}
+  - component: {fileID: 2130501795}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2130501794
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130501793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1884828706}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000076294, y: -0.000011444}
+  m_SizeDelta: {x: 378.23, y: 240.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2130501795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130501793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: bfd3dc7eb95208b40852f389795e299d, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You did it, you beat the game and won
+--- !u!222 &2130501796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130501793}
   m_CullTransparentMesh: 0

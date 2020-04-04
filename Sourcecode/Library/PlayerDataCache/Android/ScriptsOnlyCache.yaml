@@ -308,7 +308,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 65cf4e293f9f50d1591903b079c3b7ff
+      Hash: 160cb30cfb1db214a6df5449453b9ca1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game

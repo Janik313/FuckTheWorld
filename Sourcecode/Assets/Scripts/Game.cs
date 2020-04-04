@@ -30,7 +30,7 @@ public class Game : MonoBehaviour
     public float PlutoniumCost = 100000;
     public float PlutoniumScore = 0;
     public Text PlutoniumText;
-    public float BombCost = 10000;
+    public float BombCost = 300;
     public float BombScore = 0;
     public Text BombText;
     public float EarthHealth = 4;
@@ -40,6 +40,7 @@ public class Game : MonoBehaviour
     public Image ThreeHit;
     public Image FourHit;
     public Text Bombs2;
+    public Text WinText;
 
     public void Start()
     {
@@ -250,44 +251,50 @@ public class Game : MonoBehaviour
 
     public void CheckHit()
     {
-        if (EarthHealth != 4)
+        if (EarthHealth == 4)
         {
             ZeroHit.enabled = true;
             OneHit.enabled = false;
             TwoHit.enabled = false;
             ThreeHit.enabled = false;
             FourHit.enabled = false;
-        }else if(EarthHealth != 3)
+            WinText.gameObject.SetActive(false);
+        }
+        else if(EarthHealth == 3)
         {
             ZeroHit.enabled = false;
             OneHit.enabled = true;
             TwoHit.enabled = false;
             ThreeHit.enabled = false;
             FourHit.enabled = false;
+            WinText.gameObject.SetActive(false);
         }
-        else if (EarthHealth != 2)
+        else if (EarthHealth == 2)
         {
             ZeroHit.enabled = false;
             OneHit.enabled = false;
             TwoHit.enabled = true;
             ThreeHit.enabled = false;
             FourHit.enabled = false;
+            WinText.gameObject.SetActive(false);
         }
-        else if (EarthHealth != 1)
+        else if (EarthHealth == 1)
         {
             ZeroHit.enabled = false;
             OneHit.enabled = false;
             TwoHit.enabled = false;
             ThreeHit.enabled = true;
             FourHit.enabled = false;
+            WinText.gameObject.SetActive(false);
         }
-        else if (EarthHealth != 0)
+        else if (EarthHealth == 0)
         {
             ZeroHit.enabled = false;
             OneHit.enabled = false;
             TwoHit.enabled = false;
             ThreeHit.enabled = false;
             FourHit.enabled = true;
+            WinText.gameObject.SetActive(true);
         }
     }
 
