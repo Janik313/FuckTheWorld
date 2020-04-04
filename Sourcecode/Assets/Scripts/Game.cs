@@ -30,7 +30,7 @@ public class Game : MonoBehaviour
     public float PlutoniumCost = 100000;
     public float PlutoniumScore = 0;
     public Text PlutoniumText;
-    public float BombCost = 300;
+    public float BombCost = 3000;
     public float BombScore = 0;
     public Text BombText;
     public float EarthHealth = 4;
@@ -69,15 +69,15 @@ public class Game : MonoBehaviour
         PlayerPrefs.SetFloat("CurrentScore", score += UranPS * Time.deltaTime);
         UranPS = PlayerPrefs.GetFloat("UranPerSec");
         UranPerSec.text = "Uranium/s: " + UranPS;
-        FactoryUpgradeButton.text = "Build a new Facotry\n" + "Costs: " + FactoryUpgradeCost;
-        WorkerUpgradeButton.text = "Hire a new worker\n" + "Costs: " + WorkerUpgradeCost;
+        FactoryUpgradeButton.text = "Costs: " + FactoryUpgradeCost;
+        WorkerUpgradeButton.text = "Costs: " + WorkerUpgradeCost;
         WorkerUpgradeCost = PlayerPrefs.GetFloat("WorkerUpgradeCost");
         FactoryUpgradeCost = PlayerPrefs.GetFloat("FactoryUpgradeCost");
-        GrandmaUpgradeButton.text = "Hire a new Grandma\n" + "Costs: " + GrandmaUpgradeCost;
+        GrandmaUpgradeButton.text = "Costs: " + GrandmaUpgradeCost;
         GrandmaUpgradeCost = PlayerPrefs.GetFloat("GrandmaUpgradeCost");
-        MineUpgradeButton.text = "Build a new Mine\n" + "Costs: " + MineUpgradeCost;
+        MineUpgradeButton.text = "Costs: " + MineUpgradeCost;
         MineUpgradeCost = PlayerPrefs.GetFloat("MineUpgradeCost");
-        AlienUpgradeButton.text = "Hire a new Alien\n" + "Costs: " + AlienUpgradeCost;
+        AlienUpgradeButton.text = "Costs: " + AlienUpgradeCost;
         AlienUpgradeCost = PlayerPrefs.GetFloat("AlienUpgradeCost");
         PlutoniumScore = PlayerPrefs.GetFloat("PlutoniumScore");
         PlutoniumText.text = PlutoniumScore.ToString();
@@ -86,6 +86,7 @@ public class Game : MonoBehaviour
         EarthHealth = PlayerPrefs.GetFloat("EarthHealth");
         Bombs2.text = BombScore.ToString();
         CheckHit();
+        ClickScoreUpgradeButton.text = "Costs: " + ClickScoreUpgradeCost;
     }
 
     public void AddUran()
@@ -142,7 +143,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentScore", score -= ClickScoreUpgradeCost);
             PlayerPrefs.SetFloat("ClickScoreUpgradeCost", ClickScoreUpgradeCost + 50);
             ClickScoreUpgradeCost = PlayerPrefs.GetFloat("ClickScoreUpgradeCost");
-            ClickScoreUpgradeButton.text = "Upgrade your production \n" + "Costs: " + ClickScoreUpgradeCost;
+            ClickScoreUpgradeButton.text = "Costs: " + ClickScoreUpgradeCost;
             AddingScore = PlayerPrefs.GetFloat("AddingScore");
         }
     }
@@ -155,7 +156,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentScore", score -= FactoryUpgradeCost);
             PlayerPrefs.SetFloat("FactoryUpgradeCost", FactoryUpgradeCost + 50000);
             FactoryUpgradeCost = PlayerPrefs.GetFloat("FactoryUpgradeCost");
-            FactoryUpgradeButton.text = "Build a new Facotry\n" + "Costs: " + FactoryUpgradeCost;
+            FactoryUpgradeButton.text = "Costs: " + FactoryUpgradeCost;
             FactoryPerSec = PlayerPrefs.GetFloat("FactoryPerSec");
             PlayerPrefs.SetFloat("UranPerSec", UranPS + 1000);
         }
@@ -169,7 +170,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentScore", score -= WorkerUpgradeCost);
             PlayerPrefs.SetFloat("WorkerUpgradeCost", WorkerUpgradeCost + 500);
             WorkerUpgradeCost = PlayerPrefs.GetFloat("WorkerUpgradeCost");
-            WorkerUpgradeButton.text = "Hire a new Worker\n" + "Costs: " + WorkerUpgradeCost;
+            WorkerUpgradeButton.text = "Costs: " + WorkerUpgradeCost;
             WorkerPerSec = PlayerPrefs.GetFloat("WorkerPerSec");
             PlayerPrefs.SetFloat("UranPerSec", UranPS + 5);
         }
@@ -181,9 +182,9 @@ public class Game : MonoBehaviour
         {
             PlayerPrefs.SetFloat("GrandmaPerSec", GrandmaPerSec + 15);
             PlayerPrefs.SetFloat("CurrentScore", score -= GrandmaUpgradeCost);
-            PlayerPrefs.SetFloat("GrandmaUpgradeCost", GrandmaUpgradeCost + 500);
+            PlayerPrefs.SetFloat("GrandmaUpgradeCost", GrandmaUpgradeCost + 3000);
             GrandmaUpgradeCost = PlayerPrefs.GetFloat("GrandmaUpgradeCost");
-            GrandmaUpgradeButton.text = "Hire a new Grandma\n" + "Costs: " + GrandmaUpgradeCost;
+            GrandmaUpgradeButton.text = "Costs: " + GrandmaUpgradeCost;
             GrandmaPerSec = PlayerPrefs.GetFloat("GrandmaPerSec");
             PlayerPrefs.SetFloat("UranPerSec", UranPS + 15);
         }
@@ -197,7 +198,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentScore", score -= MineUpgradeCost);
             PlayerPrefs.SetFloat("MineUpgradeCost", MineUpgradeCost + 10000);
             MineUpgradeCost = PlayerPrefs.GetFloat("MineUpgradeCost");
-            MineUpgradeButton.text = "Build a new Mine\n" + "Costs: " + MineUpgradeCost;
+            MineUpgradeButton.text = "Costs: " + MineUpgradeCost;
             MinePerSec = PlayerPrefs.GetFloat("MinePerSec");
             PlayerPrefs.SetFloat("UranPerSec", UranPS + 100);
         }
@@ -211,7 +212,7 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("CurrentScore", score -= AlienUpgradeCost);
             PlayerPrefs.SetFloat("AlienUpgradeCost", AlienUpgradeCost + 750000);
             AlienUpgradeCost = PlayerPrefs.GetFloat("AlienUpgradeCost");
-            AlienUpgradeButton.text = "Hire a new Alien\n" + "Costs: " + AlienUpgradeCost;
+            AlienUpgradeButton.text = "Costs: " + AlienUpgradeCost;
             AlienPerSec = PlayerPrefs.GetFloat("AlienPerSec");
             PlayerPrefs.SetFloat("UranPerSec", UranPS + 10000);
         }
@@ -222,18 +223,18 @@ public class Game : MonoBehaviour
     {
         if (PlutoniumCost < PlayerPrefs.GetFloat("CurrentScore"))
         {
-            PlayerPrefs.SetFloat("CurrentScore", score -= ClickScoreUpgradeCost);
+            PlayerPrefs.SetFloat("CurrentScore", score -= PlutoniumCost);
             PlayerPrefs.SetFloat("PlutoniumScore", PlutoniumScore += 1);
         }
     }
 
-    //Bomb
+    //Build Bomb
 
     public void bomb()
     {
-        if (BombCost < PlayerPrefs.GetFloat("PlutoniumScore"))
+        if (3000 < PlayerPrefs.GetInt("PlutoniumScore"))
         {
-            PlayerPrefs.SetFloat("PlutoniumScore", PlutoniumScore -= 1);
+            PlayerPrefs.SetFloat("PlutoniumScore", PlutoniumScore -= 3000);
             PlayerPrefs.SetFloat("BombScore", BombScore += 1);
         }
     }
