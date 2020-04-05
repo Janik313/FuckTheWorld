@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    public Text ScoreText;
     public float score;
     public float AddingScore = 1;
     public float ClickScoreUpgradeCost = 100;
@@ -16,7 +15,6 @@ public class Game : MonoBehaviour
     public float WorkerUpgradeCost = 500;
     public Text WorkerUpgradeButton;
     public float WorkerPerSec = 0;
-    public Text UranPerSec;
     public float UranPS = 0;
     public float GrandmaUpgradeCost = 2000;
     public Text GrandmaUpgradeButton;
@@ -25,22 +23,50 @@ public class Game : MonoBehaviour
     public Text MineUpgradeButton;
     public float MinePerSec = 0;
     public float AlienUpgradeCost = 500000;
-    public Text AlienUpgradeButton;
     public float AlienPerSec = 0;
     public float PlutoniumCost = 100000;
     public float PlutoniumScore = 0;
-    public Text PlutoniumText;
     public float BombCost = 3000;
     public float BombScore = 0;
-    public Text BombText;
     public float EarthHealth = 4;
     public Image ZeroHit;
     public Image OneHit;
     public Image TwoHit;
     public Image ThreeHit;
     public Image FourHit;
-    public Text Bombs2;
+    public Text AlienUpgradeButton;
     public Text WinText;
+
+
+
+
+    //Texts
+    public Text Bombs2;
+    public Text PlutoniumText2;
+    public Text UranPerSec2;
+    public Text ScoreText2;
+
+    public Text BombText3;
+    public Text PlutoniumText3;
+    public Text UranPerSec3;
+    public Text ScoreText3;
+
+    public Text BombText4;
+    public Text PlutoniumText4;
+    public Text UranPerSec4;
+    public Text ScoreText4;
+
+    public Text BombText5;
+    public Text PlutoniumText5;
+    public Text UranPerSec5;
+    public Text ScoreText5;
+
+    public Text BombText;
+    public Text PlutoniumText;
+    public Text UranPerSec;
+    public Text ScoreText;
+
+
 
     public void Start()
     {
@@ -62,13 +88,11 @@ public class Game : MonoBehaviour
     }
     public void Update()
     {
-        ScoreText.text = "You have \n" + score.ToString("F0") + "\n Uranium";
         score = PlayerPrefs.GetFloat("CurrentScore");
         FactoryPerSec = PlayerPrefs.GetFloat("FactoryPerSec");
         WorkerPerSec = PlayerPrefs.GetFloat("WorkerPerSec");
         PlayerPrefs.SetFloat("CurrentScore", score += UranPS * Time.deltaTime);
         UranPS = PlayerPrefs.GetFloat("UranPerSec");
-        UranPerSec.text = "Uranium/s: " + UranPS;
         FactoryUpgradeButton.text = "Costs: " + FactoryUpgradeCost;
         WorkerUpgradeButton.text = "Costs: " + WorkerUpgradeCost;
         WorkerUpgradeCost = PlayerPrefs.GetFloat("WorkerUpgradeCost");
@@ -80,13 +104,35 @@ public class Game : MonoBehaviour
         AlienUpgradeButton.text = "Costs: " + AlienUpgradeCost;
         AlienUpgradeCost = PlayerPrefs.GetFloat("AlienUpgradeCost");
         PlutoniumScore = PlayerPrefs.GetFloat("PlutoniumScore");
-        PlutoniumText.text = PlutoniumScore.ToString();
         BombScore = PlayerPrefs.GetFloat("BombScore");
-        BombText.text = BombScore.ToString();
         EarthHealth = PlayerPrefs.GetFloat("EarthHealth");
-        Bombs2.text = BombScore.ToString();
         CheckHit();
         ClickScoreUpgradeButton.text = "Costs: " + ClickScoreUpgradeCost;
+
+        ScoreText.text = score.ToString("F0");
+        BombText.text = BombScore.ToString();
+        PlutoniumText.text = PlutoniumScore.ToString();
+        UranPerSec.text = UranPS.ToString("F0");
+
+        Bombs2.text = BombScore.ToString();
+        ScoreText2.text = score.ToString("F0");
+        PlutoniumText2.text = PlutoniumScore.ToString();
+        UranPerSec2.text = UranPS.ToString("F0");
+
+        ScoreText3.text = score.ToString("F0");
+        BombText3.text = BombScore.ToString();
+        PlutoniumText3.text = PlutoniumScore.ToString();
+        UranPerSec3.text = UranPS.ToString("F0");
+
+        ScoreText4.text = score.ToString("F0");
+        BombText4.text = BombScore.ToString();
+        PlutoniumText4.text = PlutoniumScore.ToString();
+        UranPerSec4.text = UranPS.ToString("F0");
+
+        ScoreText5.text = score.ToString("F0");
+        BombText5.text = BombScore.ToString();
+        PlutoniumText5.text = PlutoniumScore.ToString();
+        UranPerSec5.text = UranPS.ToString("F0");
     }
 
     public void AddUran()
@@ -228,11 +274,20 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void Plutonium100()
+    {
+        if (10000000 < PlayerPrefs.GetFloat("CurrentScore"))
+        {
+            PlayerPrefs.SetFloat("CurrentScore", score -= 10000000);
+            PlayerPrefs.SetFloat("PlutoniumScore", PlutoniumScore += 100);
+        }
+    }
+
     //Build Bomb
 
     public void bomb()
     {
-        if (3000 < PlayerPrefs.GetInt("PlutoniumScore"))
+        if (3000 < PlayerPrefs.GetFloat("PlutoniumScore"))
         {
             PlayerPrefs.SetFloat("PlutoniumScore", PlutoniumScore -= 3000);
             PlayerPrefs.SetFloat("BombScore", BombScore += 1);
@@ -245,6 +300,7 @@ public class Game : MonoBehaviour
     {
         if (PlayerPrefs.GetFloat("BombScore") > 0)
         {
+            PlayerPrefs.SetFloat("BombScore", BombScore -= 1);
             PlayerPrefs.SetFloat("EarthHealth", EarthHealth -= 1);
             EarthHealth = PlayerPrefs.GetFloat("EarthHealth");
         }

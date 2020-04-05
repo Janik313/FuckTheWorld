@@ -308,7 +308,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 160cb30cfb1db214a6df5449453b9ca1
+      Hash: 0d143e4b8572987d1bcf2a134273625e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game
@@ -573,4 +573,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: D:/users/Janik/Documents/GitHub/FuckTheWorld/F-ckTheWorld.apk
+  playerPath: D:/Users/janik/Documents/GitHub/FuckTheWorld/F-ckTheWorld.apk

@@ -1,6 +1,12 @@
 # FuckTheWorld
  A cookie clicker stile Game where you have to destroy the earth.
 ## Changelog
+### Version 2.5
+Made mutible Bug Fixes.
+
++Added a ressurce display.
+
+-Removed the Web-Version because it didn't work.
 ### Version 2.0
 Made mutible Bug Fixes.
 
